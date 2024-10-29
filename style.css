@@ -101,88 +101,6 @@ li {
   z-index: -1;
 }
 
-/* Maybe, gears animation */
-.gear-container {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0;
-}
-
-.gear {
-  width: 10rem;
-  height: 10rem;
-  display: grid;
-  background: radial-gradient(
-    farthest-side,
-    currentColor calc(100% - 20px),
-    #0000 calc(100% - 20px) 0
-  );
-
-  mask: radial-gradient(
-    farthest-side,
-    #0000 calc(101% - 45px),
-    #000 calc(101% - 45px)
-  );
-  -webkit-mask: radial-gradient(
-    farthest-side,
-    #0000 calc(101% - 45px),
-    #000 calc(101% - 45px)
-  );
-  border-radius: 50%;
-}
-
-.gear-one {
-  animation: spinClockwise 5s 1 linear;
-  margin-right: -5px;
-}
-.gear-two {
-  animation: spinCounterclockwise 5s linear;
-  margin-left: -5px;
-  color: green;
-}
-
-.gear::before,
-.gear::after {
-  content: '';
-  grid-area: 1/1;
-  background: linear-gradient(currentColor 0 0) center,
-    linear-gradient(currentColor 0 0) center;
-  background-size: 100% 1.75rem, 1.75rem 100%;
-  background-repeat: no-repeat;
-}
-
-.gear::after {
-  transform: rotate(45deg);
-}
-
-.gear-two::before {
-  transform: rotate(23deg);
-}
-.gear-two::after {
-  transform: rotate(68deg);
-}
-
-@keyframes spinClockwise {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spinCounterclockwise {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
 .plug-container {
   margin-top: 5rem;
   position: relative;
@@ -196,7 +114,7 @@ li {
   border-top: 4px solid #1a3e5f;
   border-bottom: 4px solid #1a3e5f;
   box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
-  animation: wire-animation 10s linear 5s 1 forwards;
+  animation: wire-animation 2.5s linear 2.5s 1 forwards;
 }
 
 .wire.left {
@@ -296,7 +214,7 @@ li {
 
 .wire-head-part.five,
 .wire-head-part.four {
-  animation: left-head-part-four-five 10s linear 5s 1 forwards;
+  animation: left-head-part-four-five 2.5s linear 2.5s 1 forwards;
 }
 
 @media (min-width: 414px) {
@@ -326,35 +244,35 @@ li {
   .wire-head-part.one {
     width: 1.7%;
     left: 35%;
-    animation: left-head-part-one 10s linear 5s 1 forwards;
+    animation: left-head-part-one 2.5s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.one.right {
     left: auto;
     right: 35%;
-    animation: right-head-part-one 10s linear 5s 1 forwards;
+    animation: right-head-part-one 2.5s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.two {
     width: 4.25%;
     left: 36.85%;
-    animation: left-head-part-two 10s linear 5s 1 forwards;
+    animation: left-head-part-two 2.5s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.two.right {
     right: 36.8%;
-    animation: right-head-part-two 10s linear 5s 1 forwards;
+    animation: right-head-part-two 2.5s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.three {
     left: 41.3%;
     width: 1.7%;
-    animation: left-head-part-three 10s linear 5s 1 forwards;
+    animation: left-head-part-three 2.5s linear 2.5s 1 forwards;
   }
   .wire-head-part.three.right {
     right: 41.2%;
     width: 1.7%;
-    animation: right-head-part-three 10s linear 5s 1 forwards;
+    animation: right-head-part-three 2.5s linear 2.5s 1 forwards;
   }
 }
 
