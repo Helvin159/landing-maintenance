@@ -1,0 +1,463 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 99.9dvh;
+  max-width: 100%;
+  color: #1a3e5f;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 3rem;
+}
+
+p {
+  font-size: 22px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  text-align: left;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.relative {
+  position: relative;
+}
+
+.header {
+  padding: 1rem 0;
+}
+
+.container-body {
+  padding: 1rem;
+}
+
+.container {
+  max-width: 90ch;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.fluid-container {
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.w-94-dvh {
+  height: 94dvh;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.background-circle {
+  width: 44rem;
+  height: 44rem;
+  background-color: rgba(12, 162, 64, 0.15);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* Maybe, gears animation */
+.gear-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.gear {
+  width: 10rem;
+  height: 10rem;
+  display: grid;
+  background: radial-gradient(
+    farthest-side,
+    currentColor calc(100% - 20px),
+    #0000 calc(100% - 20px) 0
+  );
+
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(101% - 45px),
+    #000 calc(101% - 45px)
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(101% - 45px),
+    #000 calc(101% - 45px)
+  );
+  border-radius: 50%;
+}
+
+.gear-one {
+  animation: spinClockwise 5s 1 linear;
+  margin-right: -5px;
+}
+.gear-two {
+  animation: spinCounterclockwise 5s linear;
+  margin-left: -5px;
+  color: green;
+}
+
+.gear::before,
+.gear::after {
+  content: '';
+  grid-area: 1/1;
+  background: linear-gradient(currentColor 0 0) center,
+    linear-gradient(currentColor 0 0) center;
+  background-size: 100% 1.75rem, 1.75rem 100%;
+  background-repeat: no-repeat;
+}
+
+.gear::after {
+  transform: rotate(45deg);
+}
+
+.gear-two::before {
+  transform: rotate(23deg);
+}
+.gear-two::after {
+  transform: rotate(68deg);
+}
+
+@keyframes spinClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinCounterclockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.plug-container {
+  margin-top: 5rem;
+  position: relative;
+  width: 100vw;
+}
+
+.wire {
+  height: 1.75rem;
+  width: 25%;
+  background: white;
+  border-top: 4px solid #1a3e5f;
+  border-bottom: 4px solid #1a3e5f;
+  box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
+  animation: wire-animation 10s linear 5s 1 forwards;
+}
+
+.wire.left {
+  position: absolute;
+  left: 0;
+}
+
+.wire.right {
+  position: absolute;
+  right: 0;
+}
+
+.wire-head-part {
+  background-color: #2b6cb0;
+  position: absolute;
+}
+.wire-head-part.one {
+  height: 3.25rem;
+  width: 4%;
+  top: -0.7rem;
+  left: 25%;
+  border-left: 4px solid #1a3e5f;
+  border-top: 4px solid #1a3e5f;
+  border-bottom: 4px solid #1a3e5f;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
+}
+.wire-head-part.one.right {
+  left: auto;
+  right: 24.85%;
+  transform: rotate(180deg);
+  box-shadow: inset 0px 7px 10px -5px rgba(0, 0, 0, 0.5);
+}
+.wire-head-part.two {
+  height: 5rem;
+  width: 8.5%;
+  top: -1.5rem;
+  left: 30%;
+  border-left: 4px solid #1a3e5f;
+  border-top: 4px solid #1a3e5f;
+  border-bottom: 4px solid #1a3e5f;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
+}
+.wire-head-part.two.right {
+  left: auto;
+  right: 29.75%;
+  transform: rotate(180deg);
+  box-shadow: inset 0px 7px 10px -5px rgba(0, 0, 0, 0.5);
+}
+.wire-head-part.three {
+  top: -2.25rem;
+  left: 39.45%;
+  width: 4%;
+  height: 6.5rem;
+  border: 4px solid #1a3e5f;
+  border-radius: 7px;
+  box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
+}
+.wire-head-part.three.right {
+  left: auto;
+  right: 39%;
+  border: 4px solid #1a3e5f;
+  height: 6.5rem;
+}
+.wire-head-part.four {
+  top: -1.2rem;
+  left: 43.5%;
+  background: white;
+  max-width: 2rem;
+  width: 100%;
+  min-width: 1rem;
+  border: 2px solid #1a3e5f;
+  border-left: none;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  height: 1.6rem;
+  z-index: -1;
+  box-shadow: inset 0px -5px 10px -5px rgba(0, 0, 0, 0.5);
+}
+.wire-head-part.five {
+  top: 1.75rem;
+  left: 43.5%;
+  background: white;
+  width: 100%;
+  max-width: 2rem;
+  border: 2px solid #1a3e5f;
+  border-left: none;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  height: 1.6rem;
+  z-index: -1;
+  box-shadow: inset 0px -5px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+.wire-head-part.five,
+.wire-head-part.four {
+  animation: left-head-part-four-five 10s linear 5s 1 forwards;
+}
+
+@media (min-width: 414px) {
+  .wire-head-part.two {
+    left: 29.45%;
+  }
+
+  .wire-head-part.two.right {
+    right: 29.35%;
+  }
+
+  .wire-head-part.three {
+    left: 38.45%;
+  }
+
+  .wire-head-part.three.right {
+    right: 38%;
+  }
+}
+
+@media (min-width: 768px) {
+  .wire {
+    height: 1.75rem;
+    width: 35%;
+  }
+
+  .wire-head-part.one {
+    width: 1.7%;
+    left: 35%;
+    animation: left-head-part-one 10s linear 5s 1 forwards;
+  }
+
+  .wire-head-part.one.right {
+    left: auto;
+    right: 35%;
+    animation: right-head-part-one 10s linear 5s 1 forwards;
+  }
+
+  .wire-head-part.two {
+    width: 4.25%;
+    left: 36.85%;
+    animation: left-head-part-two 10s linear 5s 1 forwards;
+  }
+
+  .wire-head-part.two.right {
+    right: 36.8%;
+    animation: right-head-part-two 10s linear 5s 1 forwards;
+  }
+
+  .wire-head-part.three {
+    left: 41.3%;
+    width: 1.7%;
+    animation: left-head-part-three 10s linear 5s 1 forwards;
+  }
+  .wire-head-part.three.right {
+    right: 41.2%;
+    width: 1.7%;
+    animation: right-head-part-three 10s linear 5s 1 forwards;
+  }
+}
+
+.container svg {
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s;
+  fill: #666;
+  display: none;
+}
+
+@keyframes wire-animation {
+  0% {
+    height: 1.75rem;
+    width: 35%;
+  }
+  100% {
+    height: 1.75rem;
+    width: 44%;
+  }
+  /* 100% {
+    height: 1.75rem;
+    width: 35%;
+  } */
+}
+
+/* Left side animations */
+@keyframes left-head-part-one {
+  0% {
+    left: 35%;
+  }
+  100% {
+    left: 41.7%;
+  }
+  /* 100% {
+    left: 35%;
+  } */
+}
+@keyframes left-head-part-two {
+  0% {
+    left: 36.85%;
+  }
+  100% {
+    left: 43.55%;
+  }
+  /* 100% {
+    left: 36.85%;
+  } */
+}
+@keyframes left-head-part-three {
+  0% {
+    left: 41.3%;
+  }
+  100% {
+    left: 47.55%;
+  }
+  /* 100% {
+    left: 41.3%;
+  } */
+}
+@keyframes left-head-part-four-five {
+  0% {
+    left: 43.5%;
+  }
+  100% {
+    left: 49.55%;
+  }
+  /* 100% {
+    left: 43.5%;
+  } */
+}
+
+/* Right side animations */
+@keyframes right-head-part-one {
+  0% {
+    right: 35%;
+  }
+  100% {
+    right: 41.7%;
+  }
+  /* 100% {
+    right: 35%;
+  } */
+}
+@keyframes right-head-part-two {
+  0% {
+    right: 36.8%;
+  }
+  100% {
+    right: 43.5%;
+  }
+  /* 100% {
+    right: 36.8%;
+  } */
+}
+@keyframes right-head-part-three {
+  0% {
+    right: 41.2%;
+  }
+  100% {
+    right: 47.9%;
+  }
+  /* 100% {
+    right: 41.2%;
+  } */
+}
