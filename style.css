@@ -99,14 +99,6 @@ nav {
   min-height: 90vh;
 }
 
-.w-94-dvh {
-  min-height: 94dvh;
-}
-
-.h-80-vh {
-  height: 100vh;
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -147,7 +139,7 @@ nav {
   border-top: 4px solid var(--primary-color);
   border-bottom: 4px solid var(--primary-color);
   box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
-  animation: wire-animation-mobile 2.5s linear 2.5s 1 forwards;
+  animation: wire-animation-mobile 1s linear 2.5s 1 forwards;
 }
 
 .wire.left {
@@ -175,14 +167,14 @@ nav {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
-  animation: left-head-part-one-mobile 2.5s linear 2.5s 1 forwards;
+  animation: left-head-part-one-mobile 1s linear 2.5s 1 forwards;
 }
 .wire-head-part.one.right {
   left: auto;
   right: 30%;
   transform: rotate(180deg);
   box-shadow: inset 0px 7px 10px -5px rgba(0, 0, 0, 0.5);
-  animation: right-head-part-one-mobile 2.5s linear 2.5s 1 forwards;
+  animation: right-head-part-one-mobile 1s linear 2.5s 1 forwards;
 }
 .wire-head-part.two {
   height: 5rem;
@@ -195,14 +187,14 @@ nav {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
-  animation: left-head-part-two-mobile 2.5s linear 2.5s 1 forwards;
+  animation: left-head-part-two-mobile 1s linear 2.5s 1 forwards;
 }
 .wire-head-part.two.right {
   left: auto;
   right: 33.75%;
   transform: rotate(180deg);
   box-shadow: inset 0px 7px 10px -5px rgba(0, 0, 0, 0.5);
-  animation: right-head-part-two-mobile 2.5s linear 2.5s 1 forwards;
+  animation: right-head-part-two-mobile 1s linear 2.5s 1 forwards;
 }
 .wire-head-part.three {
   top: -2.25rem;
@@ -212,14 +204,14 @@ nav {
   border: 4px solid var(--primary-color);
   border-radius: 7px;
   box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
-  animation: left-head-part-three-mobile 2.5s linear 2.5s 1 forwards;
+  animation: left-head-part-three-mobile 1s linear 2.5s 1 forwards;
 }
 .wire-head-part.three.right {
   left: auto;
   right: 43%;
   border: 4px solid var(--primary-color);
   height: 6.5rem;
-  animation: right-head-part-three-mobile 2.5s linear 2.5s 1 forwards;
+  animation: right-head-part-three-mobile 1s linear 2.5s 1 forwards;
 }
 .wire-head-part.four {
   top: -1.2rem;
@@ -241,7 +233,7 @@ nav {
   height: 1.6rem;
   z-index: -1;
   box-shadow: inset 0px -5px 10px -5px rgba(0, 0, 0, 0.5);
-  animation: left-head-part-four-five-mobile 2.5s linear 2.5s 1 forwards;
+  animation: left-head-part-four-five-mobile 1s linear 2.5s 1 forwards;
 }
 
 @media (min-width: 414px) {
@@ -284,47 +276,47 @@ nav {
   .wire {
     height: 1.75rem;
     width: 44%;
-    animation: wire-animation 2.5s linear 2.5s 1 forwards;
+    animation: wire-animation 1s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.one {
     width: 1.7%;
     left: 41.7%;
-    animation: left-head-part-one 2.5s linear 2.5s 1 forwards;
+    animation: left-head-part-one 1s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.one.right {
     left: auto;
     right: 41.7%;
-    animation: right-head-part-one 2.5s linear 2.5s 1 forwards;
+    animation: right-head-part-one 1s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.two {
     width: 4.25%;
     left: 43.55%;
-    animation: left-head-part-two 2.5s linear 2.5s 1 forwards;
+    animation: left-head-part-two 1s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.two.right {
     right: 43.5%;
-    animation: right-head-part-two 2.5s linear 2.5s 1 forwards;
+    animation: right-head-part-two 1s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.three {
     left: 47.55%;
     width: 1.7%;
-    animation: left-head-part-three 2.5s linear 2.5s 1 forwards;
+    animation: left-head-part-three 1s linear 2.5s 1 forwards;
   }
   .wire-head-part.three.right {
     right: 47.9%;
     width: 1.7%;
-    animation: right-head-part-three 2.5s linear 2.5s 1 forwards;
+    animation: right-head-part-three 1s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.five,
   .wire-head-part.four {
     left: 49.55%;
-    animation: left-head-part-four-five 2.5s linear 2.5s 1 forwards;
+    animation: left-head-part-four-five 1s linear 2.5s 1 forwards;
   }
 }
 
