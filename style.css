@@ -100,12 +100,8 @@ nav {
   height: 44rem;
   width: 100%;
   padding: 2.5rem 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(12, 162, 64, 0.15) 0%,
-    rgba(12, 162, 64, 0.1) 100%
-  );
   border-radius: 50%;
+  /* background-size: 20rem 20rem; */
 }
 
 .pb-2 {
@@ -122,6 +118,17 @@ nav {
 
 .overflow-hidden {
   overflow: hidden;
+}
+.background-circle {
+  width: 44rem;
+  height: 44rem;
+  background-color: rgba(12, 162, 64, 0.15);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 .plug-container {
