@@ -45,8 +45,8 @@ li {
 }
 
 footer {
-  padding: 4rem 1rem 1rem;
-  background-color: white;
+  padding: 1rem;
+  background: white;
 }
 
 nav {
@@ -54,6 +54,9 @@ nav {
   text-align: center;
   box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.15);
   background-color: white;
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 
 .relative {
@@ -378,7 +381,7 @@ nav {
     left: 49.55%;
   }
   100% {
-    left: 43.55%;
+    left: 43.5%;
   }
 }
 
