@@ -1,13 +1,13 @@
+:root {
+  --primary-color: #1a3e5f;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-}
-
-body {
-  min-height: 99.9dvh;
-  max-width: 100%;
-  color: #1a3e5f;
+  overflow-x: hidden;
+  color: var(--primary-color);
 }
 
 h1,
@@ -18,14 +18,18 @@ h3 {
 }
 
 h1 {
-  font-size: 40px;
+  /* font-size: 40px; */
   line-height: 3rem;
 }
 
 p {
-  font-size: 22px;
+  font-size: 1rem;
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+footer p {
+  font-size: 1rem;
 }
 
 ul {
@@ -37,7 +41,18 @@ ul {
 li {
   text-align: left;
   line-height: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
+}
+
+footer {
+  padding: 1rem;
+}
+
+nav {
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.15);
+  background-color: white;
 }
 
 .relative {
@@ -74,7 +89,11 @@ li {
 }
 
 .w-94-dvh {
-  height: 94dvh;
+  min-height: 94dvh;
+}
+
+.h-80-vh {
+  height: 80vh;
 }
 
 .pb-2 {
@@ -89,6 +108,9 @@ li {
   text-transform: capitalize;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
 .background-circle {
   width: 44rem;
   height: 44rem;
@@ -99,6 +121,7 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+  backdrop-filter: blur(9px);
 }
 
 .plug-container {
@@ -109,12 +132,12 @@ li {
 
 .wire {
   height: 1.75rem;
-  width: 25%;
+  width: 44%;
   background: white;
-  border-top: 4px solid #1a3e5f;
-  border-bottom: 4px solid #1a3e5f;
+  border-top: 4px solid var(--primary-color);
+  border-bottom: 4px solid var(--primary-color);
   box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
-  animation: wire-animation 2.5s linear 2.5s 1 forwards;
+  animation: wire-animation-mobile 2.5s linear 2.5s 1 forwards;
 }
 
 .wire.left {
@@ -135,144 +158,158 @@ li {
   height: 3.25rem;
   width: 4%;
   top: -0.7rem;
-  left: 25%;
-  border-left: 4px solid #1a3e5f;
-  border-top: 4px solid #1a3e5f;
-  border-bottom: 4px solid #1a3e5f;
+  left: 32.3%;
+  border-left: 4px solid var(--primary-color);
+  border-top: 4px solid var(--primary-color);
+  border-bottom: 4px solid var(--primary-color);
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
+  animation: left-head-part-one-mobile 2.5s linear 2.5s 1 forwards;
 }
 .wire-head-part.one.right {
   left: auto;
-  right: 24.85%;
+  right: 30%;
   transform: rotate(180deg);
   box-shadow: inset 0px 7px 10px -5px rgba(0, 0, 0, 0.5);
+  animation: right-head-part-one-mobile 2.5s linear 2.5s 1 forwards;
 }
 .wire-head-part.two {
   height: 5rem;
   width: 8.5%;
   top: -1.5rem;
-  left: 30%;
-  border-left: 4px solid #1a3e5f;
-  border-top: 4px solid #1a3e5f;
-  border-bottom: 4px solid #1a3e5f;
+  left: 36%;
+  border-left: 4px solid var(--primary-color);
+  border-top: 4px solid var(--primary-color);
+  border-bottom: 4px solid var(--primary-color);
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
+  animation: left-head-part-two-mobile 2.5s linear 2.5s 1 forwards;
 }
 .wire-head-part.two.right {
   left: auto;
-  right: 29.75%;
+  right: 33.75%;
   transform: rotate(180deg);
   box-shadow: inset 0px 7px 10px -5px rgba(0, 0, 0, 0.5);
+  animation: right-head-part-two-mobile 2.5s linear 2.5s 1 forwards;
 }
 .wire-head-part.three {
   top: -2.25rem;
-  left: 39.45%;
+  left: 45.45%;
   width: 4%;
   height: 6.5rem;
-  border: 4px solid #1a3e5f;
+  border: 4px solid var(--primary-color);
   border-radius: 7px;
   box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
+  animation: left-head-part-three-mobile 2.5s linear 2.5s 1 forwards;
 }
 .wire-head-part.three.right {
   left: auto;
-  right: 39%;
-  border: 4px solid #1a3e5f;
+  right: 43%;
+  border: 4px solid var(--primary-color);
   height: 6.5rem;
+  animation: right-head-part-three-mobile 2.5s linear 2.5s 1 forwards;
 }
 .wire-head-part.four {
   top: -1.2rem;
-  left: 43.5%;
-  background: white;
-  max-width: 2rem;
-  width: 100%;
-  min-width: 1rem;
-  border: 2px solid #1a3e5f;
-  border-left: none;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  height: 1.6rem;
-  z-index: -1;
-  box-shadow: inset 0px -5px 10px -5px rgba(0, 0, 0, 0.5);
 }
 .wire-head-part.five {
   top: 1.75rem;
-  left: 43.5%;
-  background: white;
-  width: 100%;
-  max-width: 2rem;
-  border: 2px solid #1a3e5f;
-  border-left: none;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  height: 1.6rem;
-  z-index: -1;
-  box-shadow: inset 0px -5px 10px -5px rgba(0, 0, 0, 0.5);
 }
 
 .wire-head-part.five,
 .wire-head-part.four {
-  animation: left-head-part-four-five 2.5s linear 2.5s 1 forwards;
+  left: 49.55%;
+  background: white;
+  max-width: 2rem;
+  width: 100%;
+  border: 2px solid var(--primary-color);
+  border-left: none;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  height: 1.6rem;
+  z-index: -1;
+  box-shadow: inset 0px -5px 10px -5px rgba(0, 0, 0, 0.5);
+  animation: left-head-part-four-five-mobile 2.5s linear 2.5s 1 forwards;
 }
 
 @media (min-width: 414px) {
-  .wire-head-part.two {
-    left: 29.45%;
-  }
-
-  .wire-head-part.two.right {
-    right: 29.35%;
-  }
-
-  .wire-head-part.three {
-    left: 38.45%;
-  }
-
-  .wire-head-part.three.right {
-    right: 38%;
-  }
-}
-
-@media (min-width: 768px) {
   .wire {
     height: 1.75rem;
     width: 35%;
   }
 
+  .wire-head-part.one.right {
+    right: 32%;
+  }
+
+  .wire-head-part.two {
+    left: 36.65%;
+  }
+
+  .wire-head-part.two.right {
+    right: 36.3%;
+  }
+
+  .wire-head-part.three {
+    left: 45.45%;
+  }
+
+  .wire-head-part.three.right {
+    right: 44.5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .background-circle {
+    width: 44rem;
+    height: 44rem;
+  }
+  .wire {
+    height: 1.75rem;
+    width: 44%;
+    animation: wire-animation 2.5s linear 2.5s 1 forwards;
+  }
+
   .wire-head-part.one {
     width: 1.7%;
-    left: 35%;
+    left: 41.7%;
     animation: left-head-part-one 2.5s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.one.right {
     left: auto;
-    right: 35%;
+    right: 41.7%;
     animation: right-head-part-one 2.5s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.two {
     width: 4.25%;
-    left: 36.85%;
+    left: 43.55%;
     animation: left-head-part-two 2.5s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.two.right {
-    right: 36.8%;
+    right: 43.5%;
     animation: right-head-part-two 2.5s linear 2.5s 1 forwards;
   }
 
   .wire-head-part.three {
-    left: 41.3%;
+    left: 47.55%;
     width: 1.7%;
     animation: left-head-part-three 2.5s linear 2.5s 1 forwards;
   }
   .wire-head-part.three.right {
-    right: 41.2%;
+    right: 47.9%;
     width: 1.7%;
     animation: right-head-part-three 2.5s linear 2.5s 1 forwards;
+  }
+
+  .wire-head-part.five,
+  .wire-head-part.four {
+    left: 49.55%;
+    animation: left-head-part-four-five 2.5s linear 2.5s 1 forwards;
   }
 }
 
@@ -286,96 +323,138 @@ li {
 
 @keyframes wire-animation {
   0% {
-    height: 1.75rem;
-    width: 35%;
-  }
-  100% {
-    height: 1.75rem;
     width: 44%;
   }
-  /* 100% {
-    height: 1.75rem;
+  100% {
     width: 35%;
-  } */
+  }
+}
+@keyframes wire-animation-mobile {
+  0% {
+    width: 34%;
+  }
+  100% {
+    width: 24%;
+  }
 }
 
 /* Left side animations */
 @keyframes left-head-part-one {
   0% {
-    left: 35%;
-  }
-  100% {
     left: 41.7%;
   }
-  /* 100% {
+  100% {
     left: 35%;
-  } */
+  }
 }
 @keyframes left-head-part-two {
   0% {
+    left: 43.55%;
+  }
+  100% {
     left: 36.85%;
+  }
+}
+@keyframes left-head-part-three {
+  0% {
+    left: 47.55%;
+  }
+  100% {
+    left: 41.3%;
+  }
+}
+@keyframes left-head-part-four-five {
+  0% {
+    left: 49.55%;
   }
   100% {
     left: 43.55%;
   }
-  /* 100% {
-    left: 36.85%;
-  } */
-}
-@keyframes left-head-part-three {
-  0% {
-    left: 41.3%;
-  }
-  100% {
-    left: 47.55%;
-  }
-  /* 100% {
-    left: 41.3%;
-  } */
-}
-@keyframes left-head-part-four-five {
-  0% {
-    left: 43.5%;
-  }
-  100% {
-    left: 49.55%;
-  }
-  /* 100% {
-    left: 43.5%;
-  } */
 }
 
 /* Right side animations */
 @keyframes right-head-part-one {
   0% {
-    right: 35%;
-  }
-  100% {
     right: 41.7%;
   }
-  /* 100% {
+  100% {
     right: 35%;
-  } */
+  }
 }
 @keyframes right-head-part-two {
   0% {
-    right: 36.8%;
-  }
-  100% {
     right: 43.5%;
   }
-  /* 100% {
+  100% {
     right: 36.8%;
-  } */
+  }
 }
 @keyframes right-head-part-three {
   0% {
-    right: 41.2%;
-  }
-  100% {
     right: 47.9%;
   }
-  /* 100% {
+  100% {
     right: 41.2%;
-  } */
+  }
+}
+
+/* Mobile */
+/* Left side animations */
+@keyframes left-head-part-one-mobile {
+  0% {
+    left: 32.3%;
+  }
+  100% {
+    left: 24%;
+  }
+}
+@keyframes left-head-part-two-mobile {
+  0% {
+    left: 36.65%;
+  }
+  100% {
+    left: 28%;
+  }
+}
+@keyframes left-head-part-three-mobile {
+  0% {
+    left: 45.45%;
+  }
+  100% {
+    left: 37%;
+  }
+}
+@keyframes left-head-part-four-five-mobile {
+  0% {
+    left: 49.55%;
+  }
+  100% {
+    left: 41.5%;
+  }
+}
+
+/* Right side animations */
+@keyframes right-head-part-one-mobile {
+  0% {
+    right: 32%;
+  }
+  100% {
+    right: 24%;
+  }
+}
+@keyframes right-head-part-two-mobile {
+  0% {
+    right: 36.3%;
+  }
+  100% {
+    right: 28%;
+  }
+}
+@keyframes right-head-part-three-mobile {
+  0% {
+    right: 44.5%;
+  }
+  100% {
+    right: 36.5%;
+  }
 }
