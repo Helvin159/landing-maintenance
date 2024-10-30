@@ -29,10 +29,6 @@ p {
   margin-block-end: 0;
 }
 
-footer p {
-  font-size: 1rem;
-}
-
 ul {
   margin: 0;
 }
@@ -44,6 +40,8 @@ li {
 }
 
 footer {
+  position: static;
+  display: block;
   padding: 1rem;
   background: white;
 }
@@ -54,6 +52,8 @@ nav {
   box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.15);
   background-color: white;
   width: 100%;
+  position: static;
+  display: block;
 }
 
 .relative {
@@ -97,9 +97,15 @@ nav {
 }
 
 .content {
-  min-height: 44rem;
+  height: 44rem;
   width: 100%;
   padding: 2.5rem 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(12, 162, 64, 0.15) 0%,
+    rgba(12, 162, 64, 0.1) 100%
+  );
+  border-radius: 50%;
 }
 
 .pb-2 {
@@ -116,17 +122,6 @@ nav {
 
 .overflow-hidden {
   overflow: hidden;
-}
-.background-circle {
-  width: 44rem;
-  height: 44rem;
-  background-color: rgba(12, 162, 64, 0.15);
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
 }
 
 .plug-container {
@@ -158,6 +153,7 @@ nav {
 .wire-head-part {
   background-color: #2b6cb0;
   position: absolute;
+  z-index: 2;
 }
 .wire-head-part.one {
   height: 3.25rem;
@@ -237,6 +233,7 @@ nav {
   z-index: -1;
   box-shadow: inset 0px -5px 10px -5px rgba(0, 0, 0, 0.5);
   animation: left-head-part-four-five-mobile 1s linear 2.5s 1 forwards;
+  z-index: 1;
 }
 
 @media (min-width: 414px) {
@@ -271,11 +268,6 @@ nav {
     min-height: 44rem;
     width: 100%;
     padding: 2.5rem 1rem;
-  }
-
-  .background-circle {
-    width: 44rem;
-    height: 44rem;
   }
 
   .plug-container {
