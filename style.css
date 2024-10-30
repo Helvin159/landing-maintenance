@@ -99,7 +99,7 @@ nav {
 .content {
   min-height: 44rem;
   width: 100%;
-  padding: 2.5rem 1rem;
+  padding: 2.5rem 0;
 }
 
 .pb-2 {
@@ -267,6 +267,12 @@ nav {
 }
 
 @media (min-width: 768px) {
+  .content {
+    min-height: 44rem;
+    width: 100%;
+    padding: 2.5rem 1rem;
+  }
+
   .background-circle {
     width: 44rem;
     height: 44rem;
