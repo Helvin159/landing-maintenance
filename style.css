@@ -1,5 +1,6 @@
 :root {
   --primary-color: #1a3e5f;
+  --flag-red: #b22234;
 }
 
 html,
@@ -27,6 +28,18 @@ p {
   font-size: 18px;
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: dashed underline;
+  text-underline-offset: 6px;
+  transition: 0.15s ease-in;
+}
+
+a:hover {
+  /* American */
+  color: var(--flag-red);
 }
 
 ul {
