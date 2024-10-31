@@ -85,7 +85,7 @@ nav {
 .fluid-container {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
+  margin: 2rem auto 0;
   overflow-x: hidden;
 }
 
@@ -100,7 +100,7 @@ nav {
   height: 44rem;
   width: 100%;
   padding: 2.5rem 0;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
   background-image: linear-gradient(
     rgba(177, 176, 176, 0.15),
     rgba(177, 176, 176, 0.1)
