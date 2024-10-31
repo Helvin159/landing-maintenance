@@ -14,7 +14,7 @@ body {
 h1,
 h2,
 h3 {
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
 }
 
@@ -24,7 +24,7 @@ h1 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 18px;
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -100,8 +100,11 @@ nav {
   height: 44rem;
   width: 100%;
   padding: 2.5rem 0;
-  border-radius: 50%;
-  /* background-size: 20rem 20rem; */
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    rgba(177, 176, 176, 0.15),
+    rgba(177, 176, 176, 0.1)
+  );
 }
 
 .pb-2 {
@@ -120,6 +123,7 @@ nav {
   overflow: hidden;
 }
 .background-circle {
+  display: none;
   width: 44rem;
   height: 44rem;
   background-color: rgba(12, 162, 64, 0.15);
