@@ -1,6 +1,7 @@
 :root {
   --primary-color: #1a3e5f;
   --flag-red: #b22234;
+  --wire-head-bg: #2b6cb0;
 }
 
 html,
@@ -175,43 +176,43 @@ nav {
 }
 
 .wire-head-part {
-  background-color: #2b6cb0;
+  background-color: var(--wire-head-bg);
   position: absolute;
   z-index: 2;
 }
+.wire-head-part.one,
+.wire-head-part.two {
+  border-left: 4px solid var(--primary-color);
+  border-top: 4px solid var(--primary-color);
+  border-bottom: 4px solid var(--primary-color);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
 .wire-head-part.one {
   height: 3.25rem;
   width: 4%;
   top: -0.7rem;
   left: 32.3%;
-  border-left: 4px solid var(--primary-color);
-  border-top: 4px solid var(--primary-color);
-  border-bottom: 4px solid var(--primary-color);
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
   animation: left-head-part-one-mobile 0.65s linear 2.5s 1 forwards;
 }
+
 .wire-head-part.one.right {
   left: auto;
   right: 30%;
   transform: rotate(180deg);
-  box-shadow: inset 0px 7px 10px -5px rgba(0, 0, 0, 0.5);
   animation: right-head-part-one-mobile 0.65s linear 2.5s 1 forwards;
 }
+
 .wire-head-part.two {
   height: 5rem;
   width: 8.5%;
   top: -1.5rem;
   left: 36%;
-  border-left: 4px solid var(--primary-color);
-  border-top: 4px solid var(--primary-color);
-  border-bottom: 4px solid var(--primary-color);
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  box-shadow: inset 0px -7px 10px -5px rgba(0, 0, 0, 0.5);
   animation: left-head-part-two-mobile 0.65s linear 2.5s 1 forwards;
 }
+
 .wire-head-part.two.right {
   left: auto;
   right: 33.75%;
@@ -219,6 +220,7 @@ nav {
   box-shadow: inset 0px 7px 10px -5px rgba(0, 0, 0, 0.5);
   animation: right-head-part-two-mobile 0.65s linear 2.5s 1 forwards;
 }
+
 .wire-head-part.three {
   top: -2.25rem;
   left: 45.45%;
@@ -232,8 +234,6 @@ nav {
 .wire-head-part.three.right {
   left: auto;
   right: 43%;
-  border: 4px solid var(--primary-color);
-  height: 6.5rem;
   animation: right-head-part-three-mobile 0.65s linear 2.5s 1 forwards;
 }
 .wire-head-part.four {
