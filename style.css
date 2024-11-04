@@ -25,6 +25,12 @@ h1 {
   line-height: 3rem;
 }
 
+h2 {
+  font-size: 29px;
+  line-height: 2.5rem;
+  letter-spacing: 1.15px;
+}
+
 p {
   font-size: 18px;
   margin-block-start: 0;
@@ -34,14 +40,17 @@ p {
 
 a {
   color: var(--primary-color);
+  transition: 0.15s ease-in;
   text-decoration: dashed underline;
   text-underline-offset: 6px;
-  transition: 0.15s ease-in;
+}
+
+h2 a {
+  color: var(--flag-red);
 }
 
 a:hover {
-  /* American */
-  color: var(--flag-red);
+  color: var(--primary-color);
 }
 
 ul {
@@ -76,7 +85,7 @@ nav {
 }
 
 .header {
-  padding: 0 0 1rem;
+  padding: 0;
 }
 
 .container-body {
